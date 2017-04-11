@@ -151,5 +151,3 @@ if ( ! class_exists( 'PO_Order_Delivery_Email', false ) ) :
     }
 
 endif;
-
-return new PO_Order_Delivery_Email();
