@@ -23,6 +23,7 @@ function add_order_delivery_email( $email_classes ) {
     // add the email class to the list of email classes that WooCommerce loads
     $email_classes['PO_Order_Delivery_Email'] = new PO_Order_Delivery_Email();
     return $email_classes;
+
 }
 add_filter( 'woocommerce_email_classes', 'add_order_delivery_email' );
 
