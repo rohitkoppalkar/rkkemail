@@ -30,11 +30,20 @@ if ( ! class_exists( 'PO_Order_Delivery_Email', false ) ) :
             $this->heading        = __( 'Your order is Out For Delivery PO', 'woocommerce' );
             $this->subject        = __( 'Your {site_title} order from {order_date} is Out For Delivery', 'woocommerce' );
 
-            //$this->template_html  = ( 'emails/customer-completed-order.php' );
-            //$this->template_plain = ( 'emails/plain/customer-completed-order.php' );
+            // Points to woocommerce/templates but works
+            //$this->template_html  =  'emails/customer-completed-order.php';
+            //$this->template_plain =  'emails/plain/customer-completed-order.php';
 
-            $this->template_html  = 'emails/customer-delivered-order.php';
-            $this->template_plain = 'emails/plain/customer-delivered-order.php';
+            //$this->template_html  = plugins_url('emails/customer-delivered-order.php',dirname(__FILE__) );
+            //$this->template_plain = plugins_url('emails/plain/customer-delivered-order.php',dirname(__FILE__) );
+
+            $this->template_base  = plugin_dir_path( __FILE__ ) ;
+            $this->template_html  = plugin_dir_path( __FILE__ ) . 'emails/customer-delivered-order.php';
+            $this->template_plain = plugin_dir_path( __FILE__ ) . 'emails/plain/customer-delivered-order.php';
+
+
+            //$this->template_html  =  'emails/customer-delivered-order.php';
+            //$this->template_plain =  'emails/plain/customer-delivered-order.php';
 
             // Triggers for this email
             add_action( 'woocommerce_order_status_delivery_notification', array( $this, 'trigger' ), 10, 2 );
@@ -151,3 +160,5 @@ if ( ! class_exists( 'PO_Order_Delivery_Email', false ) ) :
     }
 
 endif;
+//disabling this to prevent 2 emails being sent
+//return new PO_Order_Delivery_Email();

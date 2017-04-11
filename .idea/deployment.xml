@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="PrestoOrder">
+  <component name="PublishConfigData" serverName="PrestoOrder" uploadOnCheckin="a97c147a-c1f6-4b44-9be3-523284270230">
     <serverData>
       <paths name="PrestoOrder">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="PrestoOrder" />
   </component>
 </project>

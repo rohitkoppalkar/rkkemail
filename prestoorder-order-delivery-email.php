@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: RKK Order Delivery Email
+ * Plugin Name: RKK Order Delivery/Pickup Email
  * Plugin URI: http://www.prestoorder.com
  * Description: Plugin for adding a custom WooCommerce email that sends customer an email when an order status is Out for Delivery
  * Author: RKK
